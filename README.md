@@ -31,7 +31,14 @@ To access the internal help menue of `genkeyset`, run:
 To generate a default KeySet with 3 active keys, run:
 
     ./genkeyset
+  
+The default output is escaped, and a single line, which isn't particularly readable.  To generated a human readable version, run:
+
+    ./genkeyset -u
     
+## Next Steps
 
+Take the escaped output generated from this tool and upload it to SSM Parameter store under the name `/orion-services/observer/session_token_keystore`
 
+Orionlabs OBserver will find it there and the magic will be at your service.
 
