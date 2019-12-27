@@ -35,9 +35,7 @@ var rootCmd = &cobra.Command{
 	Long: `
 A tool to generate JWK Key Sets for self-hosted Orionlabs PTT.
 
-The JWK Key Set is described in https://tools.ietf.org/html/rfc7517.  
-The RFC provides for additional members in the key per “Additional members” - 
-https://tools.ietf.org/html/rfc7517#section-4.  Orion labs uses this to add the 'live' boolean attribute.
+The JWK Key Set is described in https://tools.ietf.org/html/rfc7517.  The RFC provides for additional members in the key per “Additional members” - https://tools.ietf.org/html/rfc7517#section-4.  Orion labs uses this to add the 'live' boolean attribute.
 
 Orionlabs PTT requires a minimum of 3 active keys at all times, hence the default usage of this tool is to 
 create 3 keys in the KeySet.  This value can be overwritten by the user if desired.
