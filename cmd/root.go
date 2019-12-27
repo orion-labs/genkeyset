@@ -22,9 +22,11 @@ import (
 	"github.com/spf13/cobra"
 	"log"
 	"os"
+	"strings"
 )
 
 var numKeys int
+var unescape bool
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -47,12 +49,23 @@ create 3 keys in the KeySet.  This value can be overwritten by the user if desir
 			log.Fatalf("Failed to generate keyset: %s", err)
 		}
 
-		jsonbuf, err := json.MarshalIndent(keyset, "", "  ")
-		if err != nil {
-			log.Fatalf("Failed to marshall JWK KeySet into json: %s", err)
-		}
+		if unescape {
+			jsonbuf, err := json.MarshalIndent(keyset, "", "  ")
+			if err != nil {
+				log.Fatalf("Failed to marshall JWK KeySet into json: %s", err)
+			}
 
-		fmt.Printf("%s\n", jsonbuf)
+			fmt.Printf("%s\n", jsonbuf)
+			os.Exit(0)
+		} else {
+			jsonbuf, err := json.Marshal(keyset)
+			if err != nil {
+				log.Fatalf("Failed to marshall JWK KeySet into json: %s", err)
+			}
+
+			escaped := strings.ReplaceAll(string(jsonbuf), `"`, `\"`)
+			fmt.Printf("%s\n", escaped)
+		}
 	},
 }
 
@@ -67,4 +80,5 @@ func Execute() {
 
 func init() {
 	rootCmd.Flags().IntVarP(&numKeys, "keys", "k", 3, "Number of keys to generate in KeySet.")
+	rootCmd.Flags().BoolVarP(&unescape, "unescape", "u", false, "Unescape output (mainly for debugging purposes).")
 }
