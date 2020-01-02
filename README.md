@@ -1,7 +1,5 @@
 # genkeyset
 
-[![CircleCI](https://circleci.com/gh/OnBeep/genkeyset.svg?style=svg)](https://circleci.com/gh/OnBeep/genkeyset)
-
 Generate a JWK KeySet for use with Orionlabs PTT.
 
 This tool creates a JWK KeySet per https://tools.ietf.org/html/rfc7517 with additional members as provided for in “Additional members” - https://tools.ietf.org/html/rfc7517#section-4.  
