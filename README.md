@@ -4,7 +4,7 @@
 
 Generate a JWK KeySet for use with Orionlabs PTT.
 
-This tool creates a JWK KeySet perhttps://tools.ietf.org/html/rfc7517 with additional members as provided for in “Additional members” - https://tools.ietf.org/html/rfc7517#section-4.  
+This tool creates a JWK KeySet per https://tools.ietf.org/html/rfc7517 with additional members as provided for in “Additional members” - https://tools.ietf.org/html/rfc7517#section-4.  
 
 At the time of this writing, the additional members used by Orionlabs are:
 
