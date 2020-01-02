@@ -23,7 +23,7 @@ func TestGenerateKeyID(t *testing.T) {
 		{
 			"now",
 			dt,
-			fmt.Sprintf("%d%d%d", dt.Year()-2000, int(dt.Month()), dt.Day()),
+			fmt.Sprintf("%d%02d%02d", dt.Year()-2000, int(dt.Month()), dt.Day()),
 		},
 	}
 
