@@ -1,5 +1,5 @@
 /*
-Copyright © 2019 Nik Ogura <nik@orionlabs.io>
+Copyright © 2020 The genkeyset Authors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/onbeep/genkeyset/pkg/genkeyset"
+	"github.com/orion-labs/genkeyset/pkg/genkeyset"
 	"github.com/spf13/cobra"
 	"log"
 	"os"
