@@ -4,6 +4,8 @@
 
 [![codecov](https://codecov.io/gh/orion-labs/genkeyset/branch/master/graph/badge.svg)](https://codecov.io/gh/orion-labs/genkeyset)
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/orion-labs/genkeyset)](https://goreportcard.com/report/github.com/orion-labs/genkeyset)
+
 Generate a JWK KeySet for use with Orionlabs PTT.
 
 This tool creates a JWK KeySet per https://tools.ietf.org/html/rfc7517 with additional members as provided for in “Additional members” - https://tools.ietf.org/html/rfc7517#section-4.  
