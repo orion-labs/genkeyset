@@ -14,9 +14,12 @@ At the time of this writing, the additional members used by Orionlabs are:
 
 2. Download the appropriate version for your Operating System (*hint:* The MacOs version is `genkeyset_darwin_amd64`)
 
-3. Open a terminal of some sort, navigate to where you downloaded the binary, and run it.  e.g.:
+3. Open a terminal of some sort, navigate to where you downloaded the binary, make it executable (on a Mac or Linux system) and run it.  e.g.:
 
         cd Downloads <enter>
+        
+        chmod 755 genkeyset_darwin_amd64
+        
         ./genkeyset_darwin_amd64 <enter>
    
 The output will be an escaped JSON blob suitable for inclusion in your Orion Cloudformation Template.
@@ -24,7 +27,7 @@ The output will be an escaped JSON blob suitable for inclusion in your Orion Clo
 
 ## Usage
 
-To access the internal help menue of `genkeyset`, run:
+To access the internal help menu of `genkeyset`, run:
 
     ./genkeyset -h
     
