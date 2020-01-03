@@ -29,6 +29,8 @@ The output will be an escaped JSON blob suitable for inclusion in your Orion Clo
 
 ## Usage
 
+*(Note, depending on which version you downloaded, your tool program may have another name e.g. `genkeyset_darwin_amd64` for Mac, or `genkeyset_windows_amd64.exe` for Windows.)*
+
 To access the internal help menu of `genkeyset`, run:
 
     ./genkeyset -h
@@ -61,5 +63,5 @@ Provided your golang environment is successfully installed, clone this repo and 
 
     go build
     
-You will find a binary in the current working directory named `genkeyset`
+You will find a binary in the current working directory named `genkeyset`.  Run it with the instructions above.
 
