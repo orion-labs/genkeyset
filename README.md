@@ -2,9 +2,11 @@
 
 [![CircleCI](https://circleci.com/gh/orion-labs/genkeyset.svg?style=svg)](https://circleci.com/gh/orion-labs/genkeyset)
 
-[![codecov](https://codecov.io/gh/orion-labs/genkeyset/branch/master/graph/badge.svg)](https://codecov.io/gh/orion-labs/genkeyset)
+[![Coverage Status](https://codecov.io/gh/orion-labs/genkeyset/branch/master/graph/badge.svg)](https://codecov.io/gh/orion-labs/genkeyset)
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/orion-labs/genkeyset)](https://goreportcard.com/report/github.com/orion-labs/genkeyset)
+
+[![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/orion-labs/genkeyset/pkg/genkeyset)
 
 Generate a JWK KeySet for use with Orionlabs PTT.
 
