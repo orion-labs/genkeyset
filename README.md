@@ -1,5 +1,7 @@
 # genkeyset
 
+[![Current Release](https://img.shields.io/github/release/orion-labs/genkeyset.svg)](https://img.shields.io/github/release/orion-labs/genkeyset.svg)
+
 [![CircleCI](https://circleci.com/gh/orion-labs/genkeyset.svg?style=svg)](https://circleci.com/gh/orion-labs/genkeyset)
 
 [![Coverage Status](https://codecov.io/gh/orion-labs/genkeyset/branch/master/graph/badge.svg)](https://codecov.io/gh/orion-labs/genkeyset)
