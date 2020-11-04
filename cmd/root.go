@@ -27,6 +27,7 @@ import (
 
 var numKeys int
 var unescape bool
+var escape bool
 var debug bool
 
 // rootCmd represents the base command when called without any subcommands
@@ -48,14 +49,14 @@ create 3 keys in the KeySet.  This value can be overwritten by the user if desir
 			log.Fatalf("Failed to generate keyset: %s", err)
 		}
 
-		if unescape {
+		if escape {
 			jsonbuf, err := json.Marshal(keyset)
 			if err != nil {
 				log.Fatalf("Failed to marshall JWK KeySet into json: %s", err)
 			}
 
-			fmt.Printf("%s\n", jsonbuf)
-			os.Exit(0)
+			escaped := strings.ReplaceAll(string(jsonbuf), `"`, `\"`)
+			fmt.Printf("%s\n", escaped)
 
 		} else if debug {
 			jsonbuf, err := json.MarshalIndent(keyset, "", "  ")
@@ -72,8 +73,8 @@ create 3 keys in the KeySet.  This value can be overwritten by the user if desir
 				log.Fatalf("Failed to marshall JWK KeySet into json: %s", err)
 			}
 
-			escaped := strings.ReplaceAll(string(jsonbuf), `"`, `\"`)
-			fmt.Printf("%s\n", escaped)
+			fmt.Printf("%s\n", jsonbuf)
+			os.Exit(0)
 		}
 	},
 }
@@ -89,6 +90,7 @@ func Execute() {
 
 func init() {
 	rootCmd.Flags().IntVarP(&numKeys, "keys", "k", 3, "Number of keys to generate in KeySet.")
-	rootCmd.Flags().BoolVarP(&unescape, "unescape", "u", false, "Unescaped output.")
+	rootCmd.Flags().BoolVarP(&unescape, "unescape", "u", true, "Unescaped output.")
 	rootCmd.Flags().BoolVarP(&debug, "debug", "d", false, "Prettily formated json output (mainly for debugging purposes).")
+	rootCmd.Flags().BoolVarP(&escape, "escape", "e", false, "Escaped output.")
 }

@@ -27,7 +27,7 @@ import (
 )
 
 func toChar(i int) string {
-	return string('a' + i)
+	return string(rune('a' + i))
 }
 
 // GenerateKeyID creates a key identifier from the time object given.  The identifier is of the form last 2 digits of the date + 2 digits of the month + 2 digits of the day.

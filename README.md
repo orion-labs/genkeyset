@@ -44,9 +44,7 @@ To generate a default KeySet with 3 active keys, run:
 
     ./genkeyset
   
-The output will be an escaped JSON blob suitable for inclusion in your Orion Cloud Formation Template.  
-
-Input it at stack creation under `ObserverSessionTokenKeyset`.
+The output will be an escaped JSON blob suitable for inclusion in your Orion PTT System instance.
 
 ### Accessing the Help Menu
 
@@ -54,11 +52,11 @@ To access the internal help menu of `genkeyset`, run:
 
     ./genkeyset -h
     
-### Human Readable Output
+### Legacy CloudFormation Use
 
-The default output is escaped, and a single line, which isn't particularly readable.  To generated a human readable version, run:
+The default output is unescaped, which doesn't work for version 1.0.0 of the Orion PTT System in AWS.  To generate an escaped version, run:
 
-    ./genkeyset -u
+    ./genkeyset -e
 
 ## Building From Source
 

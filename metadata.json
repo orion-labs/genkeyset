@@ -1,6 +1,6 @@
 {
   "name": "genkeyset",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "package": "github.com/orion-labs/genkeyset",
   "description": "Generate a JWK KeySet for use with Orionlabs PTT",
   "repository": "https://orionlabs-dbt-tools.s3.us-east-1.amazonaws.com",
