@@ -10,6 +10,9 @@
         "name": "darwin/amd64"
       },
       {
+        "name": "darwin/arm64"
+      },
+      {
         "name": "linux/amd64"
       }
     ],
@@ -32,6 +35,12 @@
       {
         "src": "genkeyset_darwin_amd64",
         "dst": "{{.Repository}}/{{.Name}}/{{.Version}}/darwin/amd64/{{.Name}}",
+        "sig": true,
+        "checksums": true
+      },
+      {
+        "src": "genkeyset_darwin_arm64",
+        "dst": "{{.Repository}}/{{.Name}}/{{.Version}}/darwin/arm64/{{.Name}}",
         "sig": true,
         "checksums": true
       },
